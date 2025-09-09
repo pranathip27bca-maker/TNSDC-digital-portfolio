@@ -1,339 +1,235 @@
-/* General Styles */
-
+/* General */
 body {
-
-background-color:red ;
-
-margin: 0;
-
-font-family: inkfree,monospace;
-
-scroll-behavior: smooth;
-
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background: #f9fafb;
+  color: #333;
 }
 
-header {
-
-background: #333;
-
-color:dark blue;
-
-padding: 10px 20px;
-
+h1, h2, h3 {
+  margin: 10px 0;
+  text-align: center;
 }
 
-.navbar {
-
-display: flex;
-
-justify-content: space-between;
-
-align-items: center;
-
-}
-
-.navbar {
-
-display: flex;
-
-justify-content: space-between;
-
-align-items: center;
-
-}
-
-.nav-links {
-
-list-style:none;
-
-display: flex;
-
-}
-
-.nav-links li {
-
-margin: 0 10px;
-
-}
-
-.nav-links a {
-
-color: yellow;
-
-text-decoration: none;
-
-}
-
-.menu-toggle {
-
-display: none;
-
-font-size: 24px;
-
-cursor: pointer;
-
-}
-
-/* Hero Section */
-
-.hero {
-
-background: linear-gradient(to right, #4facfe, #00f2fe);
-
-color: purple;
-
-text-align: center;
-
-padding: 60px 20px;
-
-}
-
-.hero h1 span {
-
-color: black;
-
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn {
-
-background: purple;
-
-color: #333;
-
-padding: 10px 20px;
-
-text-decoration: none;
-
-margin-top: 20px;
-
-display: inline-block;
-
-border-radius: 5px;
-
+  display: inline-block;
+  background: #6366f1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #4338ca;
 }
 
-/* About Section */
-
-.about {
-
- padding: 40px 20px; 
-
- text-align: center;
-
- }
-
-.about-content { 
-
- display: flex;
-
- flex-wrap: wrap; 
-
- justify-content: center;
-
+/* Navbar */
+header {
+  background: #111827;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-
-  }
-
-.about-content img { 
-
- max-width: 150px;
-
-  border:2px solid #000000;
-
-  border-radius:20px;
-
-  margin: 20px;
-
- }
-
- 
-
- #mk{
-
-     margin :2px 100px;
-
- }
-
-/* Projects Section */
-
-.projects { 
-
-padding: 40px 20px; 
-
-background: #f4f4f4; 
-
-text-align: center;
-
 }
-
-.project-grid  { 
-
-display: grid;
-
- grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); 
-
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
   gap: 20px;
-
-  }
-
-.project-card { 
-
-background: #95f5ffb4;
-
- padding: 20px; 
-
- border-radius: 10px;
-
-  transition: transform 0.3s;
-
-  }
-
-.project-card:hover { 
-
-transform: scale(1.05);
-
- }
-
-/* Contact Section */
-
-.contact { 
-
- padding: 40px 20px;
-
-  text-align: center;
-
-  }
-
-form {
-
- max-width: 400px; margin: auto;
-
- }
-
-input, textarea {  width: 100%;
-
- padding: 10px;
-
-  margin: 10px 0;
-
-  }
-
-button {
-
-background: #4facfe;
-
- color: iceblue; 
-
- border: none; 
-
- padding: 10px;
-
-  width: 100%; 
-
+}
+.nav-links li a {
+  color: white;
+  font-weight: bold;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
   cursor: pointer;
-
-  }
-
-button:hover { 
-
-background: #00c6ff;
-
- }
-
- /* Contact Section */
-
- .contact { padding: 40px 20px; 
-
- text-align: center;
-
- }
-
-form {
-
- max-width: 400px; margin: auto;
-
- }
-
-input, textarea { 
-
- width: 100%; 
-
- padding: 10px; 
-
- margin: 10px 0;
-
- }
-
-button {
-
-background: #4facfe; 
-
-color: white; 
-
-border: none; 
-
-padding: 10px; 
-
-width: 100%; 
-
-cursor: pointer;
-
 }
 
-button:hover { 
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero span {
+  color: #fde047;
+}
 
-background: #00c6ff;
+/* Story Timeline */
+.story {
+  padding: 50px 20px;
+}
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: #6366f1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.timeline-item {
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+.timeline-item h3 {
+  margin-bottom: 10px;
+}
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+}
+.timeline-item::after {
+  content: "●";
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+  color: #6366f1;
+}
+.timeline-item.left::after {
+  right: -10px;
+}
+.timeline-item.right::after {
+  left: -10px;
+}
 
- }
+/* Highlights */
+.highlights {
+  padding: 50px 20px;
+  background: #e0e7ff;
+}
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact */
+.contact {
+  padding: 50px 20px;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact input, .contact textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.contact button {
+  cursor: pointer;
+}
 
 /* Footer */
-
 footer {
-
-background: #333;
-
-color: purple;
-
-padding: 10px;
-
-text-align: center;
-
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
 }
 
-/* Responsive Navbar */
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1f2937;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .timeline-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 50px;
+  }
+  .timeline::after {
+    left: 20px;
+  }
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+  }
+  .timeline-item::after {
+    left: 5px;
+  }
+}
 
-@media screen and (max-width: 768px) {
 
-.nav-links {
 
-display: none;
 
-flex-direction: column;
 
-background: #333;
-
-position: absolute;
-
- top: 60px; 
 
  
 
- right: 0;
 
-width: 200px;
 
-}
 
-.nav-links.show {
 
-display: flex;
 
-}
 
-.menu-toggle {
 
-display: block;
 
-}
+ 
+ 
 
-}
+
+
+  
+ 
+
+ 
+ 
+
